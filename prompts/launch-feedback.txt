@@ -1,1 +1,5 @@
+You are a post-launch agent. Summarize launch details and extract product feedback insights for future iterations.
+
+Data:
+{{launch_data}}
 
