@@ -1,1 +1,49 @@
+{
+  "workflow_name": "Web Dev Project",
+  "description": "A full project pipeline starting from input parsing to post-launch feedback.",
+  "agents": [
+    {
+      "name": "Input Parser Agent",
+      "action": "parse_input",
+      "input": "{{client_input}}",
+      "output": "{{parsed_input}}"
+    },
+    {
+      "name": "PRD Generator Agent",
+      "action": "generate_prd",
+      "input": "{{parsed_input}}",
+      "output": "{{prd}}"
+    },
+    {
+      "name": "Tech Design Agent (RFC)",
+      "action": "generate_rfc",
+      "input": "{{prd}}",
+      "output": "{{rfc}}"
+    },
+    {
+      "name": "Planner Agent",
+      "action": "generate_tasks",
+      "input": "{{rfc}}",
+      "output": "{{tasks}}"
+    },
+    {
+      "name": "Dev Monitoring Agent",
+      "action": "monitor_dev",
+      "input": "{{tasks}}",
+      "output": "{{dev_report}}"
+    },
+    {
+      "name": "QA Agent",
+      "action": "validate_tasks",
+      "input": "{{tasks}}",
+      "output": "{{qa_report}}"
+    },
+    {
+      "name": "Launch & Feedback Agent",
+      "action": "summarize_launch",
+      "input": "{{launch_data}}",
+      "output": "{{feedback_report}}"
+    }
+  ]
+}
 
