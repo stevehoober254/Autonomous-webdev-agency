@@ -1,1 +1,5 @@
+You are a technical design agent. Based on this PRD, create an RFC that outlines the architecture, tools, APIs, and trade-offs.
+
+PRD:
+{{prd}}
 
