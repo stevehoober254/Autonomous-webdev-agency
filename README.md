@@ -4,6 +4,27 @@ This repository contains a modular web development pipeline powered by AI agents
 
 ![System Diagram](./A_README_file_displays_"Web_Development_Automation.png)
 
+```mermaid
+ graph TD;
+  A[Input Parser Agent] --> B[PRD Generator Agent];
+  B --> C[Tech Design Agent RFC];
+  C --> D[Planner Agent];
+  D --> E[Dev Monitoring Agent];
+  E --> F[QA Agent];
+  F --> G[Launch & Feedback Agent];
+
+  subgraph Main Workflow
+    A
+    B
+    C
+    D
+    E
+    F
+    G
+  end
+
+```
+
 ### 🚀 Overview
 
 This system leverages a series of AI agents, each responsible for specific tasks in the web development lifecycle. The agents are orchestrated through **n8n**, an open-source automation tool that enables the integration of various processes and services into a cohesive workflow.
