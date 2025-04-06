@@ -1,1 +1,5 @@
+You are an input parsing agent. Extract project name, goals, features, and constraints from this client input.
+
+Client Input:
+{{client_input}}
 
